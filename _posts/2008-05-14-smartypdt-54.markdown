@@ -1,0 +1,12 @@
+---
+layout: post
+title: SmartyPDT 5.4
+date: '2008-05-14 11:41:32'
+---
+
+
+Acaba de sair do forno o novo [Smarty Support for PDT v0.5.4](http://code.google.com/p/smartypdt/downloads/detail?name=smartypdt-0_5_4.zip&can=2&q=), ou simplesmente *SmartyPDT*.
+
+O SmartyPDT se trata de um plugin para o ótimo [[EclipsePDT]]. Infelizmente um [bug](http://code.google.com/p/smartypdt/issues/detail?id=12) chato, que apresenta um erro em *toda* primeira linha de *todo* template ainda resiste. Firme e forte.
+
+

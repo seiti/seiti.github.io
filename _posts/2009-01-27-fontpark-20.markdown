@@ -1,0 +1,29 @@
+---
+layout: post
+title: Fontpark 2.0
+date: '2009-01-27 23:52:05'
+tags:
+- arte
+- design
+- jogo
+- programacao
+---
+
+
+Para quem não sabe, no fim do ano passado, 2008, [ocorreu o Japan Media Arts Festival](http://plaza.bunka.go.jp/english/festival/2008/winner.php). Olhando a lista de vencedores, me interessei por esta entrada: [FONTPARK 2.0](http://plaza.bunka.go.jp/english/festival/2008/entertainment/001062/), de Nakamura Yugo.
+
+Entrei no site premiado e me surpreendi. Se trata de *arte interativa* da mais alta qualidade. E o que é melhor, é **divertido**!
+
+A idéia é você criar alguma coisa visual:  um desenho, um logo, uma animação,  uma paisagem. Mas para isto utilizando apenas **letras**. E tais letras, ou *caracteres* para os colegas, podem ser do nosso alfabeto (que agora conta com 26 letras! ha!) ou do japonês! Milhares de opções para você montar sua ilustração,  desenho, paisagem ou o diabo que for.
+
+Deixo com vocês minha criação:  
+<script type="text/javascript"><!--
+__fpbp_id='s60ginhlg3qmugv';__fpbp_w=400;__fpbp_h=300;
+// --></script>  
+<script src="http://fontpark.morisawa.co.jp/js/blogparts.js" type="text/javascript"></script>
+
+(Já notaram que não tenho dom artístico?)
+
+Tente você também: [http://fontpark.morisawa.co.jp/](http://fontpark.morisawa.co.jp/)
+
+

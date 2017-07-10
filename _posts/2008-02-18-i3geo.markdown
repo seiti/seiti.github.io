@@ -1,0 +1,27 @@
+---
+layout: post
+title: I3Geo
+date: '2008-02-18 22:04:06'
+---
+
+
+![logo do I3Geo](../../wiki/images/i3geo.jpeg "WikiImage")Nas palavras do [Portal do Software Público](http://www.softwarepublico.gov.br/dotlrn/clubs/i3geo/one-community?page_num=0): “O I3Geo é um software para internet baseado em um conjunto de outros softwares livres, principalmente o [MapServer](../../wiki/MapServer/edit "Create this page"). O foco principal é a disponibilização de dados ao público aliados a um conjunto de ferramentas de navegação, geração de análises, compartilhamento e geração de mapas sob demanda.”
+
+Para baixar o pacote contendo o programa é necessário se cadastrar gratuitamente no portal, bastando um email válido. Bom, baixado o I3Geo, tentei instalá-lo no Ubuntu Gutsy Gibbon. É preciso ter instalado o PHP5, o servidor Apache e outros pacotes, dentre os quais o <tt>cgi-mapserver</tt> e o <tt>php5-mapscript</tt>.
+
+Bom, abri o [pacote](http://mapas.mma.gov.br/download/arquivos/v3_8_i3geo_linux_windows_20071211.zip) no diretório em que coloco meus sistemas de teste, editei o arquivo <tt>ms_configura.php</tt> para refletir o ambiente de minha máquina, apontei o navegador para o sistema recém instalado e… não funcionou.
+
+
+## RTFM
+
+Documentação para [instalar o I3Geo](http://www.softwarepublico.gov.br/dotlrn/clubs/i3geo/xowiki/notas_instal). Caso não se utilize os caminhos padrões pré-configurados, basicamente deve-se editar o arquivo <tt>ms_configura.php</tt>, e os *mapfiles* de configuração do [MapServer](../../wiki/MapServer/edit "Create this page").
+
+Outra alternativa é, após configurado o o arquivo <tt>ms_configura.php</tt>, apenas criar links simbólicos, a partir dos locais esperados pelo sistema, apontando para sua instalação. Lembre-se de que o Apache deve estar configurado para seguir links simbólicos.
+
+ else //se for linux { $editores = array(""); $dir_tmp = "/var/tmp/ms_tmp"; $temasdir = "/home/seiti/Workspace/i3geo/temas"; $temasaplic = "/home/seiti/Workspace/i3geo/aplicmap"; $locmapserv = "/cgi-bin/mapserv"; $locaplic = "/home/seiti/Workspace/i3geo"; $locsistemas= "http://mapas.mma.gov.br/i3geo/menutemas/sistemas.xml"; $locidentifica = "http://mapas.mma.gov.br/i3geo/menutemas/identifica.xml"; $locmapas = "http://mapas.mma.gov.br/abremapa.php?id=xml"; $R_path = "R";//se vc não instalou o R no seu servidor, tente o endereço $R_path = $locaplic."/pacotes/r/linux/r"; $postgis_con = ""; $srid_area = 1; $postgis_mapa = ""; /* $menutemas = array( array("idmenu"=>1,"arquivo"=>"http://mapas.mma.gov.br/i3geo/menutemas/menutemas.xml") ); */ $menutemas = ""; $utilizacgi = "sim"; }
+
+Criação dos links:
+
+ sudo mkdir /opt/www sudo mkdir /opt/www/html cd /opt/www/html sudo ln -s /home/seiti/Workspace/i3geo . mkdir /tmp/ms_tmp sudo chown www-data:www-data /tmp/ms_tmp cd /var/tmp sudo ln -s /tmp/ms_tmp .
+
+

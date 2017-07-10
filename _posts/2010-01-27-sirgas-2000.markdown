@@ -1,0 +1,28 @@
+---
+layout: post
+title: SIRGAS 2000
+date: '2010-01-27 13:50:32'
+tags:
+- geo
+- gis
+---
+
+
+Antes *Sistema de Referencia Geocéntrico para America del Sur* e agora *Sistema de Referencia Geocéntrico para las Américas*, o [SIRGAS](http://www.sirgas.org) é o [sistema de referenciamento espacial](http://seiti.eti.br/blog/2010/sistema-de-referenciamento-espacial) padrão do Brasil, definido pelo [IBGE](http://www.ibge.gov.br/sirgas/).
+
+Seu SRID, num[ sistema geográfico](http://seiti.eti.br/blog/2010/sistema-de-referenciamento-espacial), é  [EPSG:  4674](http://www.spatialreference.org/ref/epsg/4674/):
+
+    GEOGCS["SIRGAS 2000", DATUM["Sistema_de_Referencia_Geocentrico_para_America_del_Sur_2000", SPHEROID["GRS 1980",6378137,298.257222101, AUTHORITY["EPSG","7019"]], TOWGS84[0,0,0,0,0,0,0], AUTHORITY["EPSG","6674"]], PRIMEM["Greenwich",0, AUTHORITY["EPSG","8901"]], UNIT["degree",0.01745329251994328, AUTHORITY["EPSG","9122"]], AUTHORITY["EPSG","4674"]]
+
+Na prática o SIRGAS utiliza **o mesmo** elipsóde de referência do WGS84 – *GRS 1980*. Veja mais no [site da UFRGS](http://www6.ufrgs.br/engcart/Teste/refer_exp.html). O mesmo ocorre com o **posicionamento** do elipsóide, com seus centros situando-se bem próximos um do outro.
+
+Isto significa que as medidas dados pelo SIRGAS são quase iguais aos dados pelo WGS84,  onde uma diferença entre as medidas pode ser menor que o erro aproximado de seu instrumento GPS, pois esta diferença está na ordem de centímetros.
+
+Assim, se seu equipamento for antigo é bem provável que ocorram duas coisas:
+
+- ele não tenha uma precisão tão boa a ponto de se distinguir entre WGS84 e SIRGAS 2000;
+- ele não possua o SIRGAS 2000 em seu rol de referências.
+
+Então use o WGS84 e seja feliz.
+
+

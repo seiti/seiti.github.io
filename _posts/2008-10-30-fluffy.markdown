@@ -1,0 +1,13 @@
+---
+layout: post
+title: Fluffy!
+date: '2008-10-30 21:00:50'
+tags:
+- humor
+- programacao
+---
+
+
+[![](http://i89.photobucket.com/albums/k220/kipper_308/fran_web.jpg "Humor NERD!")](http://stackoverflow.com/questions/84556/whats-your-favorite-programmer-cartoon#84687)
+
+

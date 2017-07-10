@@ -1,0 +1,17 @@
+---
+layout: post
+title: DDD
+date: '2008-05-28 23:36:21'
+tags:
+- celular
+- ddd
+---
+
+
+Hoje recebi uma ligação no celular com prefixo de ddd 16. Com esta onda de “seqüestros” virtuais nem atendi. Mas encontrei esta página a fim de cerificar de onde originou a ligação:
+
+http://www.gp11.net/ddd/
+
+Bem útil
+
+

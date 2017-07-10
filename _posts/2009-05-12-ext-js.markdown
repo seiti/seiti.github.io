@@ -1,0 +1,32 @@
+---
+layout: post
+title: Ext JS
+date: '2009-05-12 01:29:17'
+tags:
+- framework
+- javascript
+- ui
+- web
+---
+
+
+O **Ext** ([http://extjs.com](http://extjs.com/)) trata-se de um framework [JavaScript](../../wiki/JavaScript) para criar objetos de interface com o usuário, ou *UI gadgets*, como *grids*, *trees*, layouts em *tabs* e muito mais.
+
+O legal é que os elementos criados com o [ExtJS](../../wiki/ExtJS) não ficam devendo nada às aplicações web que estamos acostumados a ver nos serviços do *Google*, *Yahoo* e *Microsoft*, sejam na funcionalidade, seja no visual.
+
+Sua licença é dual: **LGPL***ou* comercial, com preços iniciando em **USD** $289. Infelizmente nem todos os desenvolvedores precisam/querem/suportam [JavaScript](../../wiki/JavaScript).  Se for o caso recomendo ficar longe do [ExtJS](../../wiki/ExtJS).  
+ Mas caso queira se aventurar no mundo [ExtJS](../../wiki/ExtJS), nada melhor que baixar o dito cujo e dar uma olhada nos *samples*. Quem sabe não coloco um tutorial bem simples por aqui também…
+
+### Padrões de projeto
+
+Para entender o funcionamento da **API** do *Ext* é muito importante ter conhecimento sobre os chamados **padrões de projeto**, ou *design patterns*. As referências nesta área são o livro do *Gang of Four* ([WikiPedia:Design_Patterns](http://en.wikipedia.org/wiki/Design_Patterns)) e o site [C2](http://c2.com/cgi/wiki?WelcomeVisitors). Este último também é conhecido por ser o primeiro *wiki* do **mundo**.
+
+O básico para você não se perder é entender que existem componentes Ext de *apresentação* e outros que fornecem *dados*. Os de apresentação são apresentados (não diga!) no navegador, requisitando dados aos componentes que fornecem dados (interessante…).
+
+Um exemplo disto é um combobox, que podemos separar em algumas partes:
+
+- um elemento **DOM** que servirá de contêiner para o combobox, um <div>, por exemplo;2. o componente **Ext.form.ComboBox**;
+3. um componente para os dados a serem apresentados pelo combobox.
+</div>
+
+

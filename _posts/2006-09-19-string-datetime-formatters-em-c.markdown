@@ -1,0 +1,15 @@
+---
+layout: post
+title: String DateTime Formatters em C#
+date: '2006-09-19 19:31:23'
+tags:
+- c
+- string
+---
+
+
+<table border="0" cellpadding="0" cellspacing="1" class="wikka"><tbody><tr><td>Specifier</td><td>Type</td><td>Example (Passed System.DateTime.Now)</td></tr><tr><td>d</td><td>Short date</td><td>10/12/2002</td></tr><tr><td>D</td><td>Long date</td><td>December 10, 2002</td></tr><tr><td>t</td><td>Short time</td><td>10:11 PM</td></tr><tr><td>T</td><td>Long time</td><td>10:11:29 PM</td></tr><tr><td>f</td><td>Full date &</td><td>time</td></tr><tr><td>December 10, 2002 10:11 PM</td><td>F</td><td>Full date &</td></tr><tr><td>time (long)</td><td>December 10, 2002 10:11:29 PM</td><td>g</td></tr><tr><td>Default date &</td><td>time</td><td>10/12/2002 10:11 PM</td></tr><tr><td>G</td><td>Default date &</td><td>time (long)</td></tr><tr><td>10/12/2002 10:11:29 PM</td><td>M</td><td>Month day pattern</td></tr><tr><td>December 10</td><td>r</td><td>RFC1123 date string</td></tr><tr><td>Tue, 10 Dec 2002 22:11:29 GMT</td><td>s</td><td>Sortable date string</td></tr><tr><td>2002-12-10T22:11:29</td><td>u</td><td>Universal sortable, local time</td></tr><tr><td>2002-12-10 22:13:50Z</td><td>U</td><td>Universal sortable, GMT</td></tr><tr><td>December 11, 2002 3:13:50 AM</td><td>Y</td><td>Year month pattern</td></tr><tr><td>December, 2002</td></tr></tbody></table>Custom date formatting:
+
+<table border="0" cellpadding="0" cellspacing="1" class="wikka"><tbody><tr><td>Specifier</td><td>Type</td><td>Example</td><td>Example Output</td></tr><tr><td>dd</td><td>Day</td><td>{0:dd}</td><td>10</td></tr><tr><td>ddd</td><td>Day name</td><td>{0:ddd}</td><td>Tue</td></tr><tr><td>dddd</td><td>Full day name</td><td>{0:dddd}</td><td>Tuesday</td></tr><tr><td>f, ff, …</td><td>Second fractions</td><td>{0:fff}</td><td>932</td></tr><tr><td>gg, …</td><td>Era</td><td>{0:gg}</td><td>A.D.</td></tr><tr><td>hh</td><td>2 digit hour</td><td>{0:hh}</td><td>10</td></tr><tr><td>HH</td><td>2 digit hour, 24hr format</td><td>{0:HH}</td><td>22</td></tr><tr><td>mm</td><td>Minute 00-59</td><td>{0:mm}</td><td>38</td></tr><tr><td>MM</td><td>Month 01-12</td><td>{0:MM}</td><td>12</td></tr><tr><td>MMM</td><td>Month abbreviation</td><td>{0:MMM}</td><td>Dec</td></tr><tr><td>MMMM</td><td>Full month name</td><td>{0:MMMM}</td><td>December</td></tr><tr><td>ss</td><td>Seconds 00-59</td><td>{0:ss}</td><td>46</td></tr><tr><td>tt</td><td>AM or PM</td><td>{0:tt}</td><td>PM</td></tr><tr><td>yy</td><td>Year, 2 digits</td><td>{0:yy}</td><td>02</td></tr><tr><td>yyyy</td><td>Year</td><td>{0:yyyy}</td><td>2002</td></tr><tr><td>zz</td><td>Timezone offset, 2 digits</td><td>{0:zz}</td><td>-05</td></tr><tr><td>zzz</td><td>Full timezone offset</td><td>{0:zzz}</td><td>-05:00</td></tr><tr><td>:</td><td>Separator</td><td>{0:hh:mm:ss}</td><td>10:43:20</td></tr><tr><td>/</td><td>Separator</td><td>{0:dd/MM/yyyy}</td><td>10/12/2002</td></tr></tbody></table>Fonte: [http://blog.stevex.net/index.php/string-formatting-in-csharp/](http://blog.stevex.net/index.php/string-formatting-in-csharp/)
+
+

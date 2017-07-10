@@ -1,0 +1,12 @@
+---
+layout: post
+title: Python S60
+date: '2008-05-15 00:26:25'
+---
+
+
+Desistindo do OpenMoko e sua demora, resolvi adquirir um **Nokia** N95. Mesmo assim eu gostaria de ter alguma maneira de *hackear* código. Encontrei o [Python for S60](http://opensource.nokia.com/projects/pythonfors60/ "Python for S60"), um projeto livre que contém um interpretador **Python**, além de bibliotecas para interagir com várias partes do aparelho.
+
+Para utilizar  basta instalar  o [interpretador e bibliotecas](http://downloads.sourceforge.net/pys60/PythonForS60_1_4_3_3rdEd.SIS?modtime=1209367797&big_mirror=0), além de um [*shell*](http://downloads.sourceforge.net/pys60/PythonScriptShell_1_4_3_3rdEd.SIS?modtime=1209367821&big_mirror=0) interativo. Agora preciso dar uma passada de olhos na [API](http://downloads.sourceforge.net/pys60/PythonForS60_1_4_3_doc.pdf?modtime=1209367819&big_mirror=0)…
+
+

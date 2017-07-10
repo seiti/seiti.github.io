@@ -1,0 +1,83 @@
+---
+layout: post
+title: Moodle em WISP
+date: '2008-11-27 14:18:51'
+tags:
+- ead
+- moodle
+- wisp
+---
+
+
+Este post foi gerado pelo Google Docs. Bem prático!
+
+
+# Moodle em WISP
+
+Este documento orienta a instalação do sistema Moodle sob a pilha WISP – Windows, IIS, (MS)SQL e PHP.
+
+
+## MS SQL Server
+
+É preciso criar um banco específico para o Moodle, digamos *Moodle*, com as seguintes configuraçãoes:
+
+- ANSI NULLS Enabled = true (ALTER DATABASE mdl_HEAD SET ANSI_NULLS ON GO)
+- Quoted Identifiers Enabled = true (ALTER DATABASE mdl_HEAD SET QUOTED_IDENTIFIER ON GO)
+
+
+## PHP
+
+As versões a partir da 5.2.1 são as melhores para rodar sob o IIS, e, apesar da recomendação da própria MS, **não** utilizar o PHP nts (*non-thread-safe*).  
+ Na configuração do PHP são necessários estes módulos, que podem ser selecionados na instalação do PHP no Windows:
+
+[PHP_GD2]  
+ extension=php_gd2.dll
+
+[PHP_ZIP]  
+ extension=php_zip.dll
+
+[PHP_ZLIB_FILTER]  
+ extension=php_zlib_filter.dll
+
+[PHP_CURL]  
+ extension=php_curl.dll
+
+[PHP_OPENSSL]  
+ extension=php_openssl.dll
+
+[PHP_XMLRPC]  
+ extension=php_xmlrpc.dll
+
+Mais o módulo **php_dblib.dll**[1], que deve ser baixado separadamente, já que o módulo php_mssql.dll da distribuição padrão não funciona.
+
+Os valores abaixo devem ser definidos no <tt>PHP.ini</tt>:
+
+- mssql.textlimit = 20971520
+- mssql.textsize = 20971520
+- magic_quotes_gpc = Off
+
+
+## IIS
+
+No **IIS** é necessário instalar a extensão *FastCGI*, segundo recomendações da própria MS[2]. Após instalado o PHP é preciso configurar o FastCGI, executando o seguinte comando[3]:
+
+    cscript fcgiconfig.js -add -section:"PHP" -extension:php -path:"C:PHPphp-cgi.exe"
+
+Obviamente substituindo o caminho apontando para o <tt>php-cgi.exe</tt>, caso seja diferente.
+
+
+## Moodle
+
+Resta então baixar o Moodle[6] e colocá-lo em alguma pasta do sistema e criar um diretório virtual, digamos *moodle*, e permitir a execução de *scripts e executáveis*.
+
+
+## Referências
+
+[1] [http://docs.moodle.org/en/Installing_MSSQL_for_PHP#Using_FreeTDS_on_Windows](http://docs.moodle.org/en/Installing_MSSQL_for_PHP#Using_FreeTDS_on_Windows "http://docs.moodle.org/en/Installing_MSSQL_for_PHP#Using_FreeTDS_on_Windows")  
+ [2] [http://www.iis.net/php](http://www.iis.net/php "http://www.iis.net/php")  
+ [3] [http://learn.iis.net/page.aspx/247/using-fastcgi-to-host-php-applications-on-iis-60/](http://learn.iis.net/page.aspx/247/using-fastcgi-to-host-php-applications-on-iis-60/ "http://learn.iis.net/page.aspx/247/using-fastcgi-to-host-php-applications-on-iis-60/")  
+ [4] [http://seiti.eti.br/_shared/php.ini](http://seiti.eti.br/_shared/php.ini "http://seiti.eti.br/_shared/php.ini")  
+ [5] [http://seiti.eti.br/_shared/moodle.config.txt](http://seiti.eti.br/_shared/moodle.config.txt "http://seiti.eti.br/_shared/moodle.config.txt")  
+ [6] [http://download.moodle.org/](http://download.moodle.org/ "http://download.moodle.org/")
+
+

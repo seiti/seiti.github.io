@@ -1,0 +1,16 @@
+---
+layout: post
+title: sobre
+date: '2008-05-13 23:49:29'
+---
+
+
+Textos sobre programação, seus problemas e algumas soluções. Também algumas experiências com os cacarecos tecnológicos que todo Geek gosta de ter.
+
+E de vez em quando algum texto sobre um assunto aleatório.
+
+E por que um blog? Escrever sobre um assunto faz com que se deva pensar melhor sobre este assunto. Escrever para outras pessoas, além de a si mesmo, faz com que se exercite ainda mais a mufa, pesquisando, elaborando, ajudando a gravar algo nesta cabeça.
+
+Sobre mim: [http://seiti.eti.br/wiki/SeitiYamashiro](http://seiti.eti.br/wiki/SeitiYamashiro)
+
+
