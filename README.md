@@ -1,1 +1,0 @@
-# seiti.github.io
