@@ -10,18 +10,24 @@ tags:
 
 Alguns devs fazem grafts de uma branch para outra e, para ajustar arquivos e mesmo melhorar os comentários, executam um rollback do resultado do graft e depois fazem o commit:
 
+```
 $ hg graft 123412341234 $ hg rollback $ hg ci -m "msg melhor"
+```
 
 <figure class="wp-caption aligncenter" id="attachment_1317" style="width: 188px;">[![rollbaaaack!!](http://seiti.eti.br/blog/wp-content/uploads/2014/03/Rollback-188x300.png "rollbaaaack!!")](http://seiti.eti.br/blog/wp-content/uploads/2014/03/Rollback.png)<figcaption class="wp-caption-text">rollbaaaack!!</figcaption></figure>Tenho dúvidas se esta é a melhor abordagem para resolver o problema. Bom,  
  isto não é necessário.
 
 Pode-se usar o argumento –amend no commit:
 
+```
 $ hg graft 12341234123 $ hg ci -m "msg melhor" --amend
+```
 
 e pronto. Pode-se inclusive editar/incluir/remover arquivos e ir ajustando o último commit:
 
+```
 $ echo 'conteudo' > arquivo_que_preciso_incluir.sql $ hg addremove $ hg ci -m "msg melhor" --amend
+```
 
 Observação
 
@@ -31,7 +37,9 @@ Observação
 
 Instale assim:
 
+```
 $ sudo add-apt-repository ppa:tortoisehg-ppa/release $ sudo apt-get install tortoisehg
+```
 
 E você ainda ganha o tortoisehg, muito útil para se fazer consultas no hg.
 
